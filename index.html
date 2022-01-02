@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realtime-Comment-System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h4 class="mt-3 text-center border-bottom pb-2">Programming</h4>
+      <form id="comments">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            class="form-control"
+            autocomplete="off"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="comment" class="form-label">Write a Comment</label>
+          <textarea id="comment" name="comment" class="form-control"></textarea>
+        </div>
+        <button class="btn btn-outline-primary">Post Comment</button>
+      </form>
+    </div>
+    <div class="container cont"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyCrqM6SZ2VMLojg7i7c_CzWnTqLt0Lx7U0",
+        authDomain: "real-time-comment-b123c.firebaseapp.com",
+        projectId: "real-time-comment-b123c",
+        storageBucket: "real-time-comment-b123c.appspot.com",
+        messagingSenderId: "31167968430",
+        appId: "1:31167968430:web:5cfabbb2df75464930293f",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+    <script src="./app.js"></script>
+  </body>
+</html>
